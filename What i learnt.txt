@@ -1,0 +1,24 @@
+1.  Ontology Construction in protege
+2.  Python Programming Language
+3.  Numpy library
+4.  Pandas library
+5.  RDF file creation
+6.  SPARQL query file creation
+7.  in cmd running rdf .ttl file and sparql query .rq 
+8.  version control system : git and git-hub
+9.  git-bash command
+10. sementic and keyword search
+11. 
+
+
+querying in dbpedia
+
+PREFIX dbpediaO: <http://dbpedia.org/ontology/>
+
+SELECT ?body ?magnitude WHERE  {
+ ?body a dbpediaO:CelestialBody.
+ ?body dbpedia2:appmagV ?magnitude.
+ FILTER (?magnitude < 6)
+
+
+site : dbpedia.org/snorql

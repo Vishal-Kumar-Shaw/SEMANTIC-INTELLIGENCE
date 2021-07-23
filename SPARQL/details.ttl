@@ -1,0 +1,12 @@
+#filename : details.ttl
+
+@prefix ab : <http://learningsparql.com/ns/addressbook#> .
+
+ab:vishal  ab:mob "7908426016" .
+ab:vishal  ab:email "vkshaw1997@gmail.com" .
+
+ab:satyam  ab:mob "1234567890" .
+ab:satyam  ab:email "satyam@gmail.com" .
+
+ab:mohit  ab:mob   "1234426016" .
+ab:mohit  ab:email "mohit@gmail.com" .

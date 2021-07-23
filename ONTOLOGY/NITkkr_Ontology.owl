@@ -1,0 +1,282 @@
+Prefix(:=<http://www.semanticweb.org/vishal/ontologies/2021/6/untitled-ontology-10#>)
+Prefix(owl:=<http://www.w3.org/2002/07/owl#>)
+Prefix(rdf:=<http://www.w3.org/1999/02/22-rdf-syntax-ns#>)
+Prefix(xml:=<http://www.w3.org/XML/1998/namespace>)
+Prefix(xsd:=<http://www.w3.org/2001/XMLSchema#>)
+Prefix(rdfs:=<http://www.w3.org/2000/01/rdf-schema#>)
+
+
+Ontology(<http://www.semanticweb.org/vishal/ontologies/2021/6/untitled-ontology-10>
+
+Declaration(Class(:Assistant_Professors))
+Declaration(Class(:Auditorium))
+Declaration(Class(:Badminton_Court))
+Declaration(Class(:Boys_Hostel))
+Declaration(Class(:Building))
+Declaration(Class(:Central_Universities))
+Declaration(Class(:Classrooms))
+Declaration(Class(:Cricekt_Playground))
+Declaration(Class(:Curriculum))
+Declaration(Class(:Departments))
+Declaration(Class(:Director))
+Declaration(Class(:Faculty_Office))
+Declaration(Class(:Girls_Hostel))
+Declaration(Class(:Government_Aided))
+Declaration(Class(:Government_Funded))
+Declaration(Class(:HOD))
+Declaration(Class(:HOD_Office))
+Declaration(Class(:Hostels))
+Declaration(Class(:IITs))
+Declaration(Class(:Lab))
+Declaration(Class(:NIT_Kurukshetra))
+Declaration(Class(:NITs))
+Declaration(Class(:Non-Teaching_Staff))
+Declaration(Class(:Offices))
+Declaration(Class(:Peoples))
+Declaration(Class(:Placement_Cell))
+Declaration(Class(:Playground))
+Declaration(Class(:Private))
+Declaration(Class(:Professors))
+Declaration(Class(:Research_Scholars))
+Declaration(Class(:Seminar_Hall))
+Declaration(Class(:State_Universitites))
+Declaration(Class(:Students))
+Declaration(Class(:Table_Tennis_court))
+Declaration(Class(:Teaching_Staff))
+Declaration(Class(:Universities))
+Declaration(Class(:University_Grant_Commission))
+Declaration(Class(:Volleyball))
+Declaration(ObjectProperty(:Code))
+Declaration(ObjectProperty(:Plays))
+Declaration(ObjectProperty(:Stays))
+Declaration(ObjectProperty(:Studies))
+Declaration(ObjectProperty(:Teaches))
+Declaration(DataProperty(:Employee_Id))
+Declaration(DataProperty(:Name))
+Declaration(DataProperty(:Room_No))
+Declaration(DataProperty(:SUBJECT_CODE))
+Declaration(DataProperty(:Student_ID))
+############################
+#   Object Properties
+############################
+
+# Object Property: :Code (:Code)
+
+SubObjectPropertyOf(:Code owl:topObjectProperty)
+ObjectPropertyDomain(:Code :Students)
+ObjectPropertyRange(:Code :Lab)
+
+# Object Property: :Plays (:Plays)
+
+SubObjectPropertyOf(:Plays owl:topObjectProperty)
+ObjectPropertyDomain(:Plays :Peoples)
+ObjectPropertyRange(:Plays :Playground)
+
+# Object Property: :Stays (:Stays)
+
+SubObjectPropertyOf(:Stays owl:topObjectProperty)
+ObjectPropertyDomain(:Stays :Students)
+ObjectPropertyRange(:Stays :Hostels)
+
+# Object Property: :Studies (:Studies)
+
+SubObjectPropertyOf(:Studies owl:topObjectProperty)
+ObjectPropertyDomain(:Studies :Students)
+ObjectPropertyRange(:Studies :Curriculum)
+
+# Object Property: :Teaches (:Teaches)
+
+ObjectPropertyDomain(:Teaches :Teaching_Staff)
+ObjectPropertyRange(:Teaches :Students)
+
+
+############################
+#   Data Properties
+############################
+
+# Data Property: :Employee_Id (:Employee_Id)
+
+DataPropertyDomain(:Employee_Id :Non-Teaching_Staff)
+DataPropertyDomain(:Employee_Id :Teaching_Staff)
+DataPropertyRange(:Employee_Id xsd:string)
+
+# Data Property: :Name (:Name)
+
+DataPropertyDomain(:Name :Peoples)
+DataPropertyRange(:Name xsd:string)
+
+# Data Property: :Room_No (:Room_No)
+
+DataPropertyDomain(:Room_No :Classrooms)
+DataPropertyDomain(:Room_No :Lab)
+DataPropertyRange(:Room_No xsd:integer)
+
+# Data Property: :SUBJECT_CODE (:SUBJECT_CODE)
+
+DataPropertyDomain(:SUBJECT_CODE :Curriculum)
+DataPropertyRange(:SUBJECT_CODE xsd:string)
+
+# Data Property: :Student_ID (:Student_ID)
+
+DataPropertyDomain(:Student_ID :Students)
+DataPropertyRange(:Student_ID xsd:string)
+
+
+
+############################
+#   Classes
+############################
+
+# Class: :Assistant_Professors (:Assistant_Professors)
+
+SubClassOf(:Assistant_Professors :Teaching_Staff)
+
+# Class: :Auditorium (:Auditorium)
+
+SubClassOf(:Auditorium :Building)
+
+# Class: :Badminton_Court (:Badminton_Court)
+
+SubClassOf(:Badminton_Court :Playground)
+
+# Class: :Boys_Hostel (:Boys_Hostel)
+
+SubClassOf(:Boys_Hostel :Hostels)
+
+# Class: :Building (:Building)
+
+SubClassOf(:Building :Departments)
+
+# Class: :Central_Universities (:Central_Universities)
+
+SubClassOf(:Central_Universities :University_Grant_Commission)
+
+# Class: :Classrooms (:Classrooms)
+
+SubClassOf(:Classrooms :Building)
+
+# Class: :Cricekt_Playground (:Cricekt_Playground)
+
+SubClassOf(:Cricekt_Playground :Playground)
+
+# Class: :Curriculum (:Curriculum)
+
+SubClassOf(:Curriculum :Departments)
+
+# Class: :Departments (:Departments)
+
+SubClassOf(:Departments :NIT_Kurukshetra)
+DisjointClasses(:Departments :Playground)
+
+# Class: :Director (:Director)
+
+SubClassOf(:Director :Teaching_Staff)
+
+# Class: :Faculty_Office (:Faculty_Office)
+
+SubClassOf(:Faculty_Office :Offices)
+
+# Class: :Girls_Hostel (:Girls_Hostel)
+
+SubClassOf(:Girls_Hostel :Hostels)
+
+# Class: :Government_Aided (:Government_Aided)
+
+SubClassOf(:Government_Aided :Central_Universities)
+
+# Class: :Government_Funded (:Government_Funded)
+
+SubClassOf(:Government_Funded :Central_Universities)
+
+# Class: :HOD (:HOD)
+
+SubClassOf(:HOD :Teaching_Staff)
+
+# Class: :HOD_Office (:HOD_Office)
+
+SubClassOf(:HOD_Office :Offices)
+
+# Class: :Hostels (:Hostels)
+
+SubClassOf(:Hostels :Building)
+
+# Class: :IITs (:IITs)
+
+SubClassOf(:IITs :Government_Funded)
+
+# Class: :Lab (:Lab)
+
+SubClassOf(:Lab :Building)
+
+# Class: :NIT_Kurukshetra (:NIT_Kurukshetra)
+
+SubClassOf(:NIT_Kurukshetra :NITs)
+
+# Class: :NITs (:NITs)
+
+SubClassOf(:NITs :Government_Funded)
+
+# Class: :Non-Teaching_Staff (:Non-Teaching_Staff)
+
+SubClassOf(:Non-Teaching_Staff :Peoples)
+
+# Class: :Offices (:Offices)
+
+SubClassOf(:Offices :Building)
+
+# Class: :Peoples (:Peoples)
+
+SubClassOf(:Peoples :Departments)
+
+# Class: :Placement_Cell (:Placement_Cell)
+
+SubClassOf(:Placement_Cell :Building)
+
+# Class: :Playground (:Playground)
+
+SubClassOf(:Playground :NIT_Kurukshetra)
+
+# Class: :Private (:Private)
+
+SubClassOf(:Private :Central_Universities)
+
+# Class: :Professors (:Professors)
+
+SubClassOf(:Professors :Teaching_Staff)
+
+# Class: :Research_Scholars (:Research_Scholars)
+
+SubClassOf(:Research_Scholars :Teaching_Staff)
+
+# Class: :Seminar_Hall (:Seminar_Hall)
+
+SubClassOf(:Seminar_Hall :Building)
+
+# Class: :State_Universitites (:State_Universitites)
+
+SubClassOf(:State_Universitites :University_Grant_Commission)
+
+# Class: :Students (:Students)
+
+SubClassOf(:Students :Peoples)
+
+# Class: :Table_Tennis_court (:Table_Tennis_court)
+
+SubClassOf(:Table_Tennis_court :Playground)
+
+# Class: :Teaching_Staff (:Teaching_Staff)
+
+SubClassOf(:Teaching_Staff :Peoples)
+
+# Class: :Universities (:Universities)
+
+SubClassOf(:Universities :Government_Funded)
+
+# Class: :Volleyball (:Volleyball)
+
+SubClassOf(:Volleyball :Playground)
+
+
+DisjointClasses(:Hostels :Offices :Placement_Cell)
+DisjointClasses(:IITs :NITs :State_Universitites)
+)

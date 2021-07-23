@@ -1,0 +1,9 @@
+# filename : query.rq
+
+PREFIX ab : <http://learningsparql.com/ns/addressbook#>
+
+SELECT ?vishalEmail
+	WHERE
+{
+ ab : vishal ab:email ?vishalEmail .
+}
